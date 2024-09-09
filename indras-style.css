@@ -802,5 +802,9 @@ h3.highlight::before {
 }
 #glow-right {
     float: right;
-	right: 0px;
+	right: -50px;
+	top: 500px;
+}
+#glow-left {
+	right: 50px;
 }
