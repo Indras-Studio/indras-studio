@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDRAS - home</title>
+    <link rel="stylesheet" href="indras-style.css">
+	<link rel="icon" type="image/png" href="indras_logo.png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Milker&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header">
+		<img src="indras_logo.png" id="logo">
+		<ul class="nav-bar">
+			<li><a href="indras-home.html" class="nav-a">STRONA GŁÓWNA</a></li>
+			<li><a href="indras-o-nas.html" class="nav-a">O NAS</a></li>
+			<li><a href="indras-oferty.html" class="nav-a">OFERTY</a></li>
+			<li><a href="indras-kontakt.html" class="nav-a">KONTAKT</a></li>
+			<li><a href="indras-o-nas.html#section2" class="nav-a">PROJEKTY
+				<div class="div-content">
+					<table id="projects">
+						<tr>
+							<th><img src="SC_icon.png" class="project-icon"></th>
+							<td><p>SCIENCE CLICKER</p></td>
+							<td><a href="https://play.google.com/store/apps/details?id=com.IndrasStudio.ScienceClicker" class="game-store-link" target="_blank">link do gry</a></td>
+							<td><a href="#" onclick="window.location.href='indras-o-nas.html#section2'; return false;"><button class="game-info-button">Więcej informacji</button></a></td>
+						</tr>
+						<tr>
+							<th><img src="ng_icon512.png" class="project-icon"></th>
+							<td><p>NEO GRAVITY</p></td>
+							<td><a href="https://play.google.com/store/apps/details?id=com.IndrasStudio.NeoGravity" class="game-store-link" target="_blank">link do gry</a></td>
+							<td><a href="#" onclick="window.location.href='indras-o-nas.html#section2'; return false;"><button class="game-info-button">Więcej informacji</button></a></td>
+						</tr>
+					</table>
+				</div>
+			</a></li>
+		</ul>
+        <div id="toggle-button" onclick="toggleMobileMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
+    <ul class="mobile-menu" id="mobile-menu">
+        <li><a href="indras-home.html" class="nav-a">STRONA GŁÓWNA</a></li>
+        <li><a href="indras-o-nas.html" class="nav-a">O NAS</a></li>
+        <li><a href="indras-oferty.html" class="nav-a">OFERTY</a></li>
+        <li><a href="indras-kontakt.html" class="nav-a">KONTAKT</a></li>
+        <li><a href="indras-o-nas.html#section2" class="nav-a">PROJEKTY</a></li>
+        <ul class="projects-list">
+            <li><a href="https://play.google.com/store/apps/details?id=com.IndrasStudio.ScienceClicker" target="_blank">SCIENCE CLICKER</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.IndrasStudio.NeoGravity" target="_blank">NEO GRAVITY</a></li> 
+        </ul>
+    </ul>
+    <script>
+        let isOpen = false;
+        function toggleMobileMenu(menu) {
+          const mobileMenu = document.getElementById('mobile-menu');
+          if (isOpen) {
+            const currentLeft = mobileMenu.getBoundingClientRect().left;
+            mobileMenu.style.transform = `translateX(${currentLeft - window.innerWidth}px)`;
+            setTimeout(() => {
+              mobileMenu.classList.remove('open');
+              mobileMenu.style.transform = 'translateX(-100%)';
+            }, 0);
+          } else {
+            mobileMenu.classList.add('open');
+            mobileMenu.style.transform = 'translateX(0)';
+          }
+          menu.classList.toggle('open');
+          isOpen = !isOpen;
+        }
+    </script>
+	<div class="container">
+		<div class="video-container">
+            <video autoplay muted loop>
+                <source src="main_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p class="overlay-text">To <span class="blue-text"><b>MY</b></span> zrobimy<br> z <b>CIEBIE </b><span class="blue-text"><b> MILIONERA</b></span></p>
+        </div>
+	</div>
+	<div class="container-whyus">
+        <h1>DLACZEGO MY?</h1>
+        <p class="home-title">W twojej stronie gwarantujemy Ci</p>
+        <div class="square-container">
+            <div class="squares" id="squares">
+                <!-- Generowane kwadraty -->
+                <div class="square" id="left-square"></div>
+                <div class="square" id="left-square"></div>
+                <div class="square" id="left-square"></div>
+                <div class="square" id="left-square"></div>
+                <div class="square"><table><tr><td><img src="arts_icon.png" alt="icon" class="square_icon"></td><td><h4>Grafiki wysokiej<br>jakości</h4></td></tr><tr><td colspan="2"><p>Nasze zamiłowanie do estetyki oraz obecnie obowiązujących trendów owocuje coraz wyższą jakością naszych produktów, co przekłada się na zadowolenie naszych klientów takich jak ty.</p></td></tr></table></div>
+              
+                <div class="square"><table><tr><td><img src="multi_mobile_icon.png" alt="icon" class="square_icon"></td><td><h4>Dostosowanie do <br>różnych platform <br>i urządzeń</h4></td></tr><tr><td colspan="2"><p>Nasze studio specjalizuje się w tworzeniu responsywnych stron internetowych, które doskonale wyglądają i działają na różnych urządzeniach, takich jak komputery, tablety i smartfony.</p></td></tr></table></div>
+
+                <div class="square"><table><tr><td><img src="seoux_icon.png" alt="icon" class="square_icon"></td><td><h4>Dbałość o SEO i UX</h4></td></tr><tr><td colspan="2"><p>Nasze projekty nie tylko wyglądają dobrze, ale są również zoptymalizowane pod kątem wyszukiwarek (SEO) i użyteczności użytkownika (UX), co przekłada się na lepszą widoczność i efektywność strony.</p></td></tr></table></div>
+
+                <div class="square"><table><tr><td><img src="creativity_icon.png" alt="icon" class="square_icon"></td><td><h4>Kreatywność</h4></td></tr><tr><td colspan="2"><p>W naszej działalności wykazujemy się wysoką kreatywnością oraz nietuzinkowymi rozwiązaniami, które urozmaicą twoją stronę internetową, co przyczyni się do większego zaangażowania na niej.</p></td></tr></table></div>
+                
+                <div class="square"><table><tr><td><img src="support_icon.png" alt="icon" class="square_icon"></td><td><h4>Współpraca</h4></td></tr><tr><td colspan="2"><p>Będziemy wspierać Cię w każdym aspekcie prowadzenia strony, począwszy od wprowadzania poprawek po zapewnienie hostingu. Nasz zespół jest zawsze gotowy, aby odpowiedzieć na Twoje pytania i pomóc w rozwijaniu Twojej witryny.</p></td></tr></table></div>
+
+                <div class="square"><table><tr><td><img src="offers_icon.png" alt="icon" class="square_icon"></td><td><h4>Zróżnicowana oferta</h4></td></tr><tr><td colspan="2"><p>Dzięki naszej zróżnicowanej ofercie, obejmującej zarówno proste strony wizytówkowe, jak i zaawansowane, profesjonalne witryny, każdy może znaleźć rozwiązanie idealnie dopasowane do swoich potrzeb, z jasno określonymi korzyściami.</p></td></tr></table></div>
+
+
+                <div class="square"><table><tr><td><img src="square_image_7.png" alt="icon" class="square_icon"></td><td><h4>Oszczędności</h4></td></tr><tr><td colspan="2"><p>"Oszczędności" to nie tylko puste słowa które często wymawia nasza konkurencja, oszczędności to realna satysfakcja i pełna korzyść dla ciebie, którą gwarantujemy. </p></td></tr></table></div>
+            </div>
+        </div>
+        <div class="scroll-container">
+            <div class="arrow" id="leftArrow">&lt;</div>
+            <!-- <div class="indicator">
+                <div class="indicator-line" id="indicator"></div>
+            </div> -->
+            <div class="arrow" id="rightArrow">&gt;</div>
+        </div>
+    </div>
+    <div id="main">
+        <div class="animation3">
+            <h4 class="main-title">Oprócz tego</h4><br>
+        </div>
+        <div class="animation" id="ITexperience">
+            <img src="calendar_icon.png" alt="icon" id="philosophy_icon">
+            <p>4 letnie Doświadczenie <br>w branży IT</p>
+        </div>
+        <div class="animation3" id="ourOffer">
+            <h4 class="main-title">Nasza oferta</h4><br>
+            <p class="home-title">Zawiera zróżnicowany katalog wariantów stron internetowych</p>
+        </div>
+        <div id="our-offers">
+            <div class="animation">
+                <div class="our-offers-box">
+                    <img src="www_icon.gif" alt="icon" id="philosophy_icon">
+                    <p>Strony Internetowe</p>
+                </div>
+            </div>
+            <div class="animation">
+                <div class="our-offers-box">
+                    <img src="wizytowka_icon.gif" alt="icon" id="philosophy_icon">
+                    <p>Wizytówki</p>
+                </div>
+            </div>
+            <div class="animation">
+                <div class="our-offers-box">
+                    <img src="GFX_project_icon.gif" alt="icon" id="philosophy_icon">
+                    <p>Sklepy Internetowe</p>
+                </div>
+            </div>
+        </div>
+        <a href="#" onclick="window.location.href='indras-oferty.html'; return false;"><button class="game-info-button">Zobacz więcej &nbsp; &rarr;</button></a>
+        <div class="animation3">
+            <h4 class="main-title">Dostajecie także</h4><br>
+            <p class="home-title">Gwarantujemy pełne wsparcie oraz komfort współpracy</p>
+        </div>
+        <div id="our-offers">
+            <div class="animation">
+                <div class="our-offers-box">
+                    <img src="hosting icon.png" alt="icon" id="philosophy_icon">
+                    <p>Hosting z domeną .pl</p>
+                </div>
+            </div>
+            <div class="animation">
+                <div class="our-offers-box">
+                    <img src="save_icon.png" alt="icon" id="philosophy_icon">
+                    <p>Wielo okresowe wsparcie</p>
+                </div>
+            </div>
+            <div class="animation">
+                <div class="our-offers-box">
+                    <img src="ads_strzalka_icon.png" alt="icon" id="philosophy_icon">
+                    <p>Pozycjonowanie Google</p>
+                </div>
+            </div>
+        </div>
+        <a href="#" onclick="window.location.href='indras-oferty.html'; return false;"><button class="game-info-button">Zobacz więcej &nbsp; &rarr;</button></a>
+        <div class="animation3">
+            <h4 class="main-title">Przebieg współpracy</h4><br>
+            <p class="home-title">Stwórz swoją strone z nami w czterech prostych krokach</p><br>
+        </div>
+        <table>
+            <tr><td><h1 class="point">1</h1></td><td><h1 class="point-mobile">1</h1><br><p class="point-title">Wybierz oferte</p><br><p id="point-content">Przejrzyj nasze pakiety i wybierz ten, który najlepiej odpowiada Twoim potrzebom. Znajdziesz u nas rozwiązania dostosowane do różnych budżetów i wymagań.</p><br><a href="#" onclick="window.location.href='indras-oferty.html'; return false;"><button class="game-info-button">Zrób to &nbsp; &rarr;</button></a></td></tr>
+            <tr><td><h1 class="point">2</h1></td><td><h1 class="point-mobile">2</h1><br><p class="point-title">Skontaktuj się z nami</p><br><p id="point-content">Skontaktuj się z naszym zespołem, aby omówić szczegóły. Jesteśmy tu, by odpowiedzieć na Twoje pytania i pomóc Ci w podjęciu najlepszej decyzji.</p><br><a href="#" onclick="window.location.href='indras-kontakt.html'; return false;"><button class="game-info-button">Zrób to &nbsp; &rarr;</button></a></td></tr>
+            <tr><td><h1 class="point">3</h1></td><td><h1 class="point-mobile">3</h1><br><p class="point-title">Konsultacja i projektowanie</p><br><p id="point-content">Rozpocznijmy od konsultacji, podczas której zrozumiemy Twoje potrzeby. Następnie przygotujemy spersonalizowany projekt strony, który spełni Twoje oczekiwania.</p></td></tr>
+            <tr><td><h1 class="point">4</h1></td><td><h1 class="point-mobile">4</h1><br><p class="point-title">Implementacja i testowanie</p><br><p id="point-content">Po akceptacji projektu, przystępujemy do realizacji. Zadbamy o każdy szczegół, a następnie dokładnie przetestujemy stronę, aby zapewnić jej bezbłędne działanie.</p></td></tr>            
+        </table>
+    </div>
+    <!-- <div class="philosophy">
+        <h2><img src="philosophy_icon.png" alt="icon" id="philosophy_icon">Filozofia Indras</h2>
+        <div class="philosophy-content" id="philosophyContent">
+            <h3>Innowacyjność: Tworzymy nowoczesne rozwiązania, które przewyższają oczekiwania.</h3>
+            <h3>Kreatywność: Inspirujemy się sztuką i designem, by każda strona była unikatowa.</h3>
+            <h3>Otwarta komunikacja: Nasza transparentność buduje zaufanie i sukces projektów.</h3>
+            <h3>Dbałość o detale: Precyzyjne wykonanie każdego elementu, od pikseli po UX.</h3>
+            <h3>Elastyczność: Dopasowujemy się do potrzeb klientów, niezależnie od branży.</h3>
+            <h3>Optymalizacja dla SEO: Projektujemy strony z myślą o widoczności w wyszukiwarkach.</h3>
+            <h3>Responsywność: Tworzymy strony, które doskonale działają na każdym urządzeniu.</h3>
+            <h3>Wsparcie posprzedażowe: Nasza opieka nie kończy się na wdrożeniu – dbamy o dalszy rozwój.</h3>
+        </div>
+    </div> -->
+	<div id="footer">
+        <div id="footer1">
+            <h4>Menu</h4>
+            <ul>
+                <li><a href="indras-home.html" class="nav-a">STRONA GŁÓWNA</a></li>
+                <li><a href="indras-o-nas.html" class="nav-a">O NAS</a></li>
+                <li><a href="indras-oferty.html" class="nav-a">OFERTY</a></li>
+                <li><a href="indras-kontakt.html" class="nav-a">KONTAKT</a></li>
+                <li><a href="indras-o-nas.html#section2" class="nav-a">PROJEKTY</a></li>
+                <li><a href="https://play.google.com/store/apps/details?id=com.IndrasStudio.ScienceClicker" class="nav-a">SCIENCE CLICKER</a></li>
+                <li><a href="https://play.google.com/store/apps/details?id=com.IndrasStudio.NeoGravity" class="nav-a">NEO GRAVITY</a></li>
+            </ul>
+        </div>
+        <div id="footer2">
+            <h4><img src="indras_logo.png" id="white-logo"> INDRAS STUDIO</h4>
+            <p class="pMain">&copy; 2024 INDRAS STUDIO. Wszelkie prawa zastrzeżone.</p><br>
+            <a href="https://www.youtube.com/@INDRASSTUDIO" target="_blank"><img src="yt_icon.png" class="social_icons"></a>
+            <a href="https://www.youtube.com/@INDRASSTUDIO" target="_blank"><img src="x_icon.png" class="social_icons"></a>
+            <a href="https://www.youtube.com/@INDRASSTUDIO" target="_blank"><img src="ig_icon.png" class="social_icons"></a>
+        </div>
+        <div id="footer3">
+            <h4><img src="contact_icon.png" alt="icon" id="contact_icon">KONTAKT</h4>
+            <h5>emailKontaktowy@gmail.com</h5>
+        </div>
+	</div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="script.js"></script>
+    <script>
+        jQuery(function($) {
+    $(document).on('click', 'a[href*="#"]:not([href="#"])', function(e) {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+                e.preventDefault();
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 500);
+            }
+        }
+    });
+});
+
+const animations = document.querySelectorAll('.animation');
+const animations2 = document.querySelectorAll('.animation2');
+const animations3 = document.querySelectorAll('.animation3');
+
+let scrollPosition = 0;
+
+window.addEventListener('scroll', () => {
+    scrollPosition = window.scrollY;
+    
+    // Handle elements with class 'animation'
+    animations.forEach((animation) => {
+        const animationTop = animation.offsetTop;
+        const animationHeight = animation.offsetHeight;
+        const windowHeight = window.innerHeight;
+        const scrollPositionBottom = scrollPosition + windowHeight;
+        if (scrollPositionBottom > animationTop && scrollPosition < animationTop + animationHeight) {
+            animation.classList.add('show');
+        } else {
+            animation.classList.remove('show');
+        }
+    });
+
+    // Handle elements with class 'animation2'
+    animations2.forEach((animation) => {
+        const animationTop = animation.offsetTop;
+        const animationHeight = animation.offsetHeight;
+        const windowHeight = window.innerHeight;
+        const scrollPositionBottom = scrollPosition + windowHeight;
+        if (scrollPositionBottom > animationTop && scrollPosition < animationTop + animationHeight) {
+            animation.classList.add('show');
+        } else {
+            animation.classList.remove('show');
+        }
+    });
+
+    // Handle elements with class 'animation3'
+    animations3.forEach((animation) => {
+        const animationTop = animation.offsetTop;
+        const animationHeight = animation.offsetHeight;
+        const windowHeight = window.innerHeight;
+        const scrollPositionBottom = scrollPosition + windowHeight;
+        if (scrollPositionBottom > animationTop && scrollPosition < animationTop + animationHeight) {
+            animation.classList.add('show');
+        } else {
+            animation.classList.remove('show');
+        }
+    });
+});
+
+    </script>
+</body>
+</html>
