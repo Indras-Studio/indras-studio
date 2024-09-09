@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDRAS - o nas</title>
+    <link rel="stylesheet" href="indras-style-darkmode.css">
+	<link rel="icon" type="image/png" href="indras_logo.png"/>
+	<link href="https://fonts.googleapis.com/css2?family=Milker&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header">
+		<img src="indras_logo.png" id="white-logo">
+		<ul class="nav-bar">
+			<li><a href="indras-home.html" class="nav-a">STRONA GŁÓWNA</a></li>
+			<li><a href="indras-o-nas.html" class="nav-a">O NAS</a></li>
+			<li><a href="indras-oferty.html" class="nav-a">OFERTY</a></li>
+			<li><a href="indras-kontakt.html" class="nav-a">KONTAKT</a></li>
+			<li><a href="indras-o-nas.html#section2" class="nav-a">PROJEKTY
+				<div class="div-content">
+					<table id="projects">
+						<tr>
+							<th><img src="SC_icon.png" class="project-icon"></th>
+							<td><p>SCIENCE CLICKER</p></td>
+							<td><a href="https://play.google.com/store/apps/details?id=com.IndrasStudio.ScienceClicker" class="game-store-link" target="_blank">link do gry</a></td>
+							<td><a href="#" onclick="window.location.href='indras-o-nas.html#section2'; return false;"><button class="game-info-button">Więcej informacji</button></a></td>
+						</tr>
+						<tr>
+							<th><img src="ng_icon512.png" class="project-icon"></th>
+							<td><p>NEO GRAVITY</p></td>
+							<td><a href="https://play.google.com/store/apps/details?id=com.IndrasStudio.NeoGravity" class="game-store-link" target="_blank">link do gry</a></td>
+							<td><a href="#" onclick="window.location.href='indras-o-nas.html#section2'; return false;"><button class="game-info-button">Więcej informacji</button></a></td>
+						</tr>
+					</table>
+				</div>
+			</a></li>
+		</ul>
+        <div id="toggle-button" onclick="toggleMobileMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
+    <ul class="mobile-menu" id="mobile-menu">
+        <li><a href="indras-home.html" class="nav-a">STRONA GŁÓWNA</a></li>
+        <li><a href="indras-o-nas.html" class="nav-a">O NAS</a></li>
+        <li><a href="indras-oferty.html" class="nav-a">OFERTY</a></li>
+        <li><a href="indras-kontakt.html" class="nav-a">KONTAKT</a></li>
+        <li><a href="indras-o-nas.html#section2" class="nav-a">PROJEKTY</a></li>
+        <ul class="projects-list">
+            <li><a href="https://play.google.com/store/apps/details?id=com.IndrasStudio.ScienceClicker" target="_blank">SCIENCE CLICKER</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.IndrasStudio.NeoGravity" target="_blank">NEO GRAVITY</a></li> 
+        </ul>
+    </ul>
+    <script>
+        let isOpen = false;
+        function toggleMobileMenu(menu) {
+          const mobileMenu = document.getElementById('mobile-menu');
+          if (isOpen) {
+            const currentLeft = mobileMenu.getBoundingClientRect().left;
+            mobileMenu.style.transform = `translateX(${currentLeft - window.innerWidth}px)`;
+            setTimeout(() => {
+              mobileMenu.classList.remove('open');
+              mobileMenu.style.transform = 'translateX(-100%)';
+            }, 0);
+          } else {
+            mobileMenu.classList.add('open');
+            mobileMenu.style.transform = 'translateX(0)';
+          }
+          menu.classList.toggle('open');
+          isOpen = !isOpen;
+        }
+    </script>
+	<div id="all">
+		<div class="left">
+			<div class="text text-1" id="layer1">INDRAS</div>
+			<div class="text text-2" id="layer2">INDRAS</div>
+			<div class="text text-3" id="layer3">INDRAS</div>
+			<div class="text text-4" id="layer4">INDRAS</div>
+            <div id="space-left"></div>
+            <div class="animation3">
+                <img src="team_icon.png" alt="team_icon">
+            </div>
+            <div id="space-left"></div>
+            <div class="animation3">
+                <img src="projects_icons.png" alt="team_icon">
+            </div>
+		</div>
+        <div class="space"></div>
+		<div class="right">
+			<div class="animation2">
+                <br><h1 id="right-title1" class="right-title">CO ROBIMY?</h1>
+            </div>
+			<div class="animation">
+				<h2 id="first-text">Jesteśmy studiem działającym w branży IT</h2>
+			</div>
+			<div class="animation">
+				<h2>Od ponad 2 lat zajmujemy się tworzeniem <br> aplikacji mobilnych</h2>
+			</div>
+			<div class="animation">
+				<h2>Jednakże naszą specjalnością jest tworzenie stron internetowych</h2>
+			</div>
+			<div class="animation">
+				<h2>Już dziś wejdź z nami w współprace</h2>
+			</div>
+			<div class="animation">
+				<h2 id="section2">Dysponujemy zespołem profesjonalnych programistów, a także designerów którzy stworzą projekt strony idealny dla ciebie</h2>
+			</div>
+            <div class="animation2">
+                <h1 class="right-title">Nasze projekty</h1>
+            </div>
+            <div class="container">
+                <div class="element1">
+                    <video autoplay muted loop>
+                        <source src="ScienceClickerOFFICIAL_TRAILER.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="element2">
+                    <video autoplay muted loop>
+                        <source src="NeoGravityOFFICIAL_TRAILER.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="projects_container">
+                    <img src="SC_icon.png" alt="game_icon" id="SC">
+                    <img src="ng_icon512.png" alt="game_icon" id="NG">
+                </div>
+            </div>
+        
+            <script>
+                // JavaScript do obsługi najechania na ikony
+                document.getElementById('SC').addEventListener('mouseover', function() {
+                    document.querySelector('.element1').style.opacity = '0.5';
+                });
+        
+                document.getElementById('SC').addEventListener('mouseout', function() {
+                    document.querySelector('.element1').style.opacity = '0';
+                });
+        
+                document.getElementById('NG').addEventListener('mouseover', function() {
+                    document.querySelector('.element2').style.opacity = '0.5';
+                });
+        
+                document.getElementById('NG').addEventListener('mouseout', function() {
+                    document.querySelector('.element2').style.opacity = '0';
+                });
+            </script>
+			<div class="animation">
+				<h2>Nie czekaj i wybierz jedną z ofert najbardziej <br> przystosowaną dla ciebie</h2>
+			</div>
+			<div class="animation">
+				<h2>jeszcze jakis losowy tekst poczytaj sobie</h2>
+			</div>
+			<div class="animation">
+				<h2>musze wiecej dodac zeby lepiej wygladalo</h2>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+        <div id="footer1">
+            <h4>Menu</h4>
+            <ul>
+                <li><a href="indras-home.html" class="nav-a">STRONA GŁÓWNA</a></li>
+                <li><a href="indras-o-nas.html" class="nav-a">O NAS</a></li>
+                <li><a href="indras-oferty.html" class="nav-a">OFERTY</a></li>
+                <li><a href="indras-kontakt.html" class="nav-a">KONTAKT</a></li>
+                <li><a href="indras-o-nas.html#section2" class="nav-a">PROJEKTY</a></li>
+                <li><a href="https://play.google.com/store/apps/details?id=com.IndrasStudio.ScienceClicker" class="nav-a">SCIENCE CLICKER</a></li>
+                <li><a href="https://play.google.com/store/apps/details?id=com.IndrasStudio.NeoGravity" class="nav-a">NEO GRAVITY</a></li>
+            </ul>
+        </div>
+        <div id="footer2">
+            <h4><img src="indras_logo.png" id="white-logo"> INDRAS STUDIO</h4>
+            <p class="pMain">&copy; 2024 INDRAS STUDIO. Wszelkie prawa zastrzeżone.</p><br>
+            <a href="https://www.youtube.com/@INDRASSTUDIO" target="_blank"><img src="yt_icon.png" class="social_icons"></a>
+            <a href="https://www.youtube.com/@INDRASSTUDIO" target="_blank"><img src="x_icon.png" class="social_icons"></a>
+            <a href="https://www.youtube.com/@INDRASSTUDIO" target="_blank"><img src="ig_icon.png" class="social_icons"></a>
+        </div>
+        <div id="footer3">
+            <h4><img src="contact_icon.png" alt="icon" id="contact_icon">KONTAKT</h4>
+            <h5>emailKontaktowy@gmail.com</h5>
+        </div>
+	</div>
+	<script>
+        // Zmienna regulująca prędkość przesuwania
+        const speed = 1; // Zmienna prędkości, dostosuj w zależności od potrzeb
+        const minHeight = 450; // Minimalna wysokość na jaką może zjechać napis
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const layer1 = document.getElementById('layer1');
+			const layer2 = document.getElementById('layer2');
+			const layer3 = document.getElementById('layer3');
+			const layer4 = document.getElementById('layer4');
+            
+            let newTop = scrollY * speed;
+            
+            // Zapewnienie, że napis nie przesunie się poniżej minimalnej wysokości
+            if (newTop > minHeight) {
+                newTop = minHeight;
+            }
+            
+            layer1.style.top = `${newTop}px`;
+			layer2.style.top = `${(newTop*1.15)}px`;
+			layer3.style.top = `${(newTop*1.3)}px`;
+			layer4.style.top = `${(newTop*1.45)}px`;
+        });
+    </script>
+	  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        jQuery(function($) {
+    $(document).on('click', 'a[href*="#"]:not([href="#"])', function(e) {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+                e.preventDefault();
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 500);
+            }
+        }
+    });
+});
+
+const animations = document.querySelectorAll('.animation');
+const animations2 = document.querySelectorAll('.animation2');
+const animations3 = document.querySelectorAll('.animation3');
+
+let scrollPosition = 0;
+
+window.addEventListener('scroll', () => {
+    scrollPosition = window.scrollY;
+    
+    // Handle elements with class 'animation'
+    animations.forEach((animation) => {
+        const animationTop = animation.offsetTop;
+        const animationHeight = animation.offsetHeight;
+        const windowHeight = window.innerHeight;
+        const scrollPositionBottom = scrollPosition + windowHeight;
+        if (scrollPositionBottom > animationTop && scrollPosition < animationTop + animationHeight) {
+            animation.classList.add('show');
+        } else {
+            animation.classList.remove('show');
+        }
+    });
+
+    // Handle elements with class 'animation2'
+    animations2.forEach((animation) => {
+        const animationTop = animation.offsetTop;
+        const animationHeight = animation.offsetHeight;
+        const windowHeight = window.innerHeight;
+        const scrollPositionBottom = scrollPosition + windowHeight;
+        if (scrollPositionBottom > animationTop && scrollPosition < animationTop + animationHeight) {
+            animation.classList.add('show');
+        } else {
+            animation.classList.remove('show');
+        }
+    });
+
+    // Handle elements with class 'animation3'
+    animations3.forEach((animation) => {
+        const animationTop = animation.offsetTop;
+        const animationHeight = animation.offsetHeight;
+        const windowHeight = window.innerHeight;
+        const scrollPositionBottom = scrollPosition + windowHeight;
+        if (scrollPositionBottom > animationTop && scrollPosition < animationTop + animationHeight) {
+            animation.classList.add('show');
+        } else {
+            animation.classList.remove('show');
+        }
+    });
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDRAS - oferty</title>
+    <link rel="stylesheet" href="indras-style-darkmode.css">
+	<link rel="icon" type="image/png" href="indras_logo.png"/>
+	<link href="https://fonts.googleapis.com/css2?family=Milker&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header">
+		<img src="indras_logo.png" id="white-logo">
+		<ul class="nav-bar">
+			<li><a href="indras-home.html" class="nav-a">STRONA GŁÓWNA</a></li>
+			<li><a href="indras-o-nas.html" class="nav-a">O NAS</a></li>
+			<li><a href="indras-oferty.html" class="nav-a">OFERTY</a></li>
+			<li><a href="indras-kontakt.html" class="nav-a">KONTAKT</a></li>
+			<li><a href="indras-o-nas.html#section2" class="nav-a">PROJEKTY
+				<div class="div-content">
+					<table id="projects">
+						<tr>
+							<th><img src="SC_icon.png" class="project-icon"></th>
+							<td><p>SCIENCE CLICKER</p></td>
+							<td><a href="https://play.google.com/store/apps/details?id=com.IndrasStudio.ScienceClicker" class="game-store-link" target="_blank">link do gry</a></td>
+							<td><a href="#" onclick="window.location.href='indras-o-nas.html#section2'; return false;"><button class="game-info-button">Więcej informacji</button></a></td>
+						</tr>
+						<tr>
+							<th><img src="ng_icon512.png" class="project-icon"></th>
+							<td><p>NEO GRAVITY</p></td>
+							<td><a href="https://play.google.com/store/apps/details?id=com.IndrasStudio.NeoGravity" class="game-store-link" target="_blank">link do gry</a></td>
+							<td><a href="#" onclick="window.location.href='indras-o-nas.html#section2'; return false;"><button class="game-info-button">Więcej informacji</button></a></td>
+						</tr>
+					</table>
+				</div>
+			</a></li>
+		</ul>
+        <div id="toggle-button" onclick="toggleMobileMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
+    <ul class="mobile-menu" id="mobile-menu">
+        <li><a href="indras-home.html" class="nav-a">STRONA GŁÓWNA</a></li>
+        <li><a href="indras-o-nas.html" class="nav-a">O NAS</a></li>
+        <li><a href="indras-oferty.html" class="nav-a">OFERTY</a></li>
+        <li><a href="indras-kontakt.html" class="nav-a">KONTAKT</a></li>
+        <li><a href="indras-o-nas.html#section2" class="nav-a">PROJEKTY</a></li>
+        <ul class="projects-list">
+            <li><a href="https://play.google.com/store/apps/details?id=com.IndrasStudio.ScienceClicker" target="_blank">SCIENCE CLICKER</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.IndrasStudio.NeoGravity" target="_blank">NEO GRAVITY</a></li> 
+        </ul>
+    </ul>
+    <script>
+        let isOpen = false;
+        function toggleMobileMenu(menu) {
+          const mobileMenu = document.getElementById('mobile-menu');
+          if (isOpen) {
+            const currentLeft = mobileMenu.getBoundingClientRect().left;
+            mobileMenu.style.transform = `translateX(${currentLeft - window.innerWidth}px)`;
+            setTimeout(() => {
+              mobileMenu.classList.remove('open');
+              mobileMenu.style.transform = 'translateX(-100%)';
+            }, 0);
+          } else {
+            mobileMenu.classList.add('open');
+            mobileMenu.style.transform = 'translateX(0)';
+          }
+          menu.classList.toggle('open');
+          isOpen = !isOpen;
+        }
+    </script>
+    <p id="offers-title">Wybierz oferte</p>
+	<div class="offers">
+        <div class="offer" id="offer1">
+            <img src="basic_star.png" alt="icon" class="offers_star">
+            <h1>BASIC</h1>
+            <p>dla malych firm cos cos cos</p>
+            <hr>
+            <table>
+                <tr><td><img src="szablon_icon.png" alt="icon" class="offers_icon"></td><td>3 podstrony</td></tr>
+                <tr><td><img src="save_icon.png" alt="icon" class="offers_icon"></td><td>3 podstrony</td></tr>
+                <tr><td><img src="podstrony_icon.png" alt="icon" class="offers_icon"></td><td>3 podstrony</td></tr>
+                <tr><td><img src="wizualizacja_icon.png" alt="icon" class="offers_icon"></td><td>3 podstrony</td></tr>
+                <tr><td><img src="wizualizacja_icon.png" alt="icon" class="offers_icon"></td><td>3 podstrony</td></tr>
+                <tr><td><img src="wizualizacja_icon.png" alt="icon" class="offers_icon"></td><td>3 podstrony</td></tr>
+            </table>
+            <a href="#" onclick="window.location.href='indras-kontakt.html'; return false;"><button class="offers-button">Wybierz</button></a>
+            <p id="price">800-1000PLN</p>
+        </div>
+        <div class="offer" id="offer2">
+            <img src="normal_star.png" alt="icon" class="offers_star">
+            <h1>NORMAL</h1>
+            <p>dla malych firm cos cos cos</p>
+            <hr>
+            <table>
+                <tr><td><img src="szablon_icon.png" alt="icon" class="offers_icon"></td><td>3 podstrony</td></tr>
+                <tr><td><img src="save_icon.png" alt="icon" class="offers_icon"></td><td>3 podstrony</td></tr>
+                <tr><td><img src="podstrony_icon.png" alt="icon" class="offers_icon"></td><td>3 podstrony</td></tr>
+                <tr><td><img src="wizualizacja_icon.png" alt="icon" class="offers_icon"></td><td>3 podstrony</td></tr>
+                <tr><td><img src="wizualizacja_icon.png" alt="icon" class="offers_icon"></td><td>3 podstrony</td></tr>
+                <tr><td><img src="wizualizacja_icon.png" alt="icon" class="offers_icon"></td><td>3 podstrony</td></tr>
+            </table>
+            <a href="#" onclick="window.location.href='indras-kontakt.html'; return false;"><button class="offers-button">Wybierz</button></a>
+            <p id="price">1500-1800PLN</p>
+        </div>
+        <div class="offer" id="offer3">
+            <img src="premium_star.png" alt="icon" class="offers_star">
+            <h1>PREMIUM</h1>
+            <p>dla malych firm cos cos cos</p>
+            <hr>
+            <table>
+                <tr><td><img src="szablon_icon.png" alt="icon" class="offers_icon"></td><td>3 podstrony</td></tr>
+                <tr><td><img src="save_icon.png" alt="icon" class="offers_icon"></td><td>3 podstrony</td></tr>
+                <tr><td><img src="podstrony_icon.png" alt="icon" class="offers_icon"></td><td>3 podstrony</td></tr>
+                <tr><td><img src="wizualizacja_icon.png" alt="icon" class="offers_icon"></td><td>3 podstrony</td></tr>
+                <tr><td><img src="wizualizacja_icon.png" alt="icon" class="offers_icon"></td><td>3 podstrony</td></tr>
+                <tr><td><img src="wizualizacja_icon.png" alt="icon" class="offers_icon"></td><td>3 podstrony</td></tr>
+            </table>
+            <a href="#" onclick="window.location.href='indras-kontakt.html'; return false;"><button class="offers-button">Wybierz</button></a>
+            <p id="price">2000-2500PLN</p>
+        </div>
+    </div>
+	<div id="footer">
+        <div id="footer1">
+            <h4>Menu</h4>
+            <ul>
+                <li><a href="indras-home.html" class="nav-a">STRONA GŁÓWNA</a></li>
+                <li><a href="indras-o-nas.html" class="nav-a">O NAS</a></li>
+                <li><a href="indras-oferty.html" class="nav-a">OFERTY</a></li>
+                <li><a href="indras-kontakt.html" class="nav-a">KONTAKT</a></li>
+                <li><a href="indras-o-nas.html#section2" class="nav-a">PROJEKTY</a></li>
+                <li><a href="https://play.google.com/store/apps/details?id=com.IndrasStudio.ScienceClicker" class="nav-a">SCIENCE CLICKER</a></li>
+                <li><a href="https://play.google.com/store/apps/details?id=com.IndrasStudio.NeoGravity" class="nav-a">NEO GRAVITY</a></li>
+            </ul>
+        </div>
+        <div id="footer2">
+            <h4><img src="indras_logo.png" id="white-logo"> INDRAS STUDIO</h4>
+            <p class="pMain">&copy; 2024 INDRAS STUDIO. Wszelkie prawa zastrzeżone.</p><br>
+            <a href="https://www.youtube.com/@INDRASSTUDIO" target="_blank"><img src="yt_icon.png" class="social_icons"></a>
+            <a href="https://www.youtube.com/@INDRASSTUDIO" target="_blank"><img src="x_icon.png" class="social_icons"></a>
+            <a href="https://www.youtube.com/@INDRASSTUDIO" target="_blank"><img src="ig_icon.png" class="social_icons"></a>
+        </div>
+        <div id="footer3">
+            <h4><img src="contact_icon.png" alt="icon" id="contact_icon">KONTAKT</h4>
+            <h5>emailKontaktowy@gmail.com</h5>
+        </div>
+	</div>
+</body>
+</html>
