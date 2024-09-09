@@ -712,9 +712,11 @@ h3.highlight::before {
 }
 .point{
 	display: block;
+	color: white ;
 }
 .point-mobile{
 	display: none;
+	color: white ;
 }
 .home-title{
 	font-size: 30px;
