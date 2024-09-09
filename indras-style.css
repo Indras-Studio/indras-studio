@@ -777,27 +777,27 @@ h3.highlight::before {
     border-radius: 100%;
     background-color: rgba(70, 14, 160, 0.7); /* Centralny punkt światła w ciemnym fiolecie */
     box-shadow: 0 0 200px 100px rgba(70, 14, 160, 0.3), /* Większa i bardziej rozproszona poświata */
-                0 0 300px 150px rgba(70, 14, 160, 0.2),
-                0 0 400px 200px rgba(70, 14, 160, 0.1);
-    animation: pulsate 20s infinite; /* Wolniejsza animacja */
+                0 0 300px 150px rgba(70, 14, 160, 0.15),
+                0 0 400px 200px rgba(70, 14, 160, 0.05);
+    animation: pulsate 25s infinite; /* Wolniejsza animacja */
 }
 
 /* Animacja pulsowania */
 @keyframes pulsate {
     0% {
-        box-shadow: 0 0 200px 100px rgba(70, 14, 160, 0.3), 
-                    0 0 300px 150px rgba(70, 14, 160, 0.2),
-                    0 0 400px 300px rgba(70, 14, 160, 0.1);
+        box-shadow: 0 0 200px 100px rgba(70, 14, 160, 0.2), 
+                    0 0 300px 150px rgba(70, 14, 160, 0.15),
+                    0 0 400px 300px rgba(70, 14, 160, 0.05);
     }
     50% {
-        box-shadow: 0 0 400px 300px rgba(70, 14, 160, 0.3), 
-                    0 0 500px 400px rgba(70, 14, 160, 0.2),
-                    0 0 100px 50px rgba(170, 14, 160, 0.1);
+        box-shadow: 0 0 400px 200px rgba(70, 14, 160, 0.3), 
+                    0 0 600px 300px rgba(70, 14, 160, 0.15),
+                    0 0 800px 400px rgba(170, 14, 160, 0.05);
     }
     200% {
-        box-shadow: 0 0 200px 100px rgba(70, 14, 160, 0.3), 
-                    0 0 300px 150px rgba(70, 14, 160, 0.2),
-                    0 0 400px 200px rgba(70, 14, 160, 0.1);
+        box-shadow: 0 0 200px 100px rgba(70, 14, 160, 0.2), 
+                    0 0 300px 150px rgba(70, 14, 160, 0.15),
+                    0 0 400px 200px rgba(70, 14, 160, 0.05);
     }
 }
 #glow-right {
@@ -806,5 +806,5 @@ h3.highlight::before {
 	top: 500px;
 }
 #glow-left {
-	right: 50px;
+	right: 60px;
 }
