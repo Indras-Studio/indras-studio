@@ -23,11 +23,12 @@ body{
 	position: fixed;
     top: 0;
     left: 0;
-	z-index: 1000;
+	z-index: 100;
 	align-items: center;
 	display: flex;
 	justify-content: space-between;
 	text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+	/* backdrop-filter: blur(150px); */
 }
 #logo{
 	height: 80%;
@@ -201,7 +202,6 @@ h1{
 	text-align: center;
 	padding: 0;
 	margin: 0;
-	text-shadow: 0 0 5px purple, 0 0 6px #0000FF;
 	color: transparent;
 	display: inline;
 	line-height: 100px;
@@ -691,10 +691,10 @@ h3.highlight::before {
   border: white 1px solid;
 }
 #main h1{
-	color: rgb(12, 12, 12);
+	color: rgb(202, 202, 202);
 	font-size: 175px;
 	font-weight: bold;
-	text-shadow: 2px 2px 0px white, -2px -2px 0px white, 2px -2px 0px white, -2px 2px 0px white;
+	/* text-shadow: 2px 2px 0px white, -2px -2px 0px white, 2px -2px 0px white, -2px 2px 0px white; */
 	margin: 0px 0px 15px 0px;
 	margin-bottom: 50px;
 }
@@ -712,11 +712,10 @@ h3.highlight::before {
 }
 .point{
 	display: block;
-	color: white ;
+
 }
 .point-mobile{
 	display: none;
-	color: white ;
 }
 .home-title{
 	font-size: 30px;
@@ -768,4 +767,40 @@ h3.highlight::before {
 	.point-mobile{
 		display: block;
 	}
+}
+.glow {
+	z-index: -10;
+    position: relative;
+    height: 0px;
+    width: 0px;
+	opacity: 50% ;
+    border-radius: 100%;
+    background-color: rgba(70, 14, 160, 0.7); /* Centralny punkt światła w ciemnym fiolecie */
+    box-shadow: 0 0 200px 100px rgba(70, 14, 160, 0.3), /* Większa i bardziej rozproszona poświata */
+                0 0 300px 150px rgba(70, 14, 160, 0.2),
+                0 0 400px 200px rgba(70, 14, 160, 0.1);
+    animation: pulsate 20s infinite; /* Wolniejsza animacja */
+}
+
+/* Animacja pulsowania */
+@keyframes pulsate {
+    0% {
+        box-shadow: 0 0 200px 100px rgba(70, 14, 160, 0.3), 
+                    0 0 300px 150px rgba(70, 14, 160, 0.2),
+                    0 0 400px 300px rgba(70, 14, 160, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 400px 300px rgba(70, 14, 160, 0.3), 
+                    0 0 500px 400px rgba(70, 14, 160, 0.2),
+                    0 0 100px 50px rgba(170, 14, 160, 0.1);
+    }
+    200% {
+        box-shadow: 0 0 200px 100px rgba(70, 14, 160, 0.3), 
+                    0 0 300px 150px rgba(70, 14, 160, 0.2),
+                    0 0 400px 200px rgba(70, 14, 160, 0.1);
+    }
+}
+#glow-right {
+    float: right;
+	right: 0px;
 }
