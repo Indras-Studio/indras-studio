@@ -19,9 +19,9 @@ body{
     background-color: rgb(12, 12, 12);
 	opacity: 100%;
     margin: 0;
-	position: fixed;
-background: rgba(12, 12, 12, 0.6); /* Półprzezroczyste tło */
+	background: rgba(12, 12, 12, 0.6); /* Półprzezroczyste tło */
   backdrop-filter: blur(3px); /* Efekt rozmycia */
+	position: fixed;
     top: 0;
     left: 0;
 	z-index: 1000;
@@ -29,6 +29,7 @@ background: rgba(12, 12, 12, 0.6); /* Półprzezroczyste tło */
 	display: flex;
 	justify-content: space-between;
 	text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+	word-spacing: 0px; 
 } 
 #white-logo{
 	height: 80%;

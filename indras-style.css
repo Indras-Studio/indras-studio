@@ -20,8 +20,8 @@ body{
     background-color: white;
 	opacity: 100%;
     margin: 0;
-background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(3px);
+	background: rgba(255, 255, 255, 0.6); /* Półprzezroczyste tło */
+  backdrop-filter: blur(3px); /* Efekt rozmycia */
 	position: fixed;
     top: 0;
     left: 0;
