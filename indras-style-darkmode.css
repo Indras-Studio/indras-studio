@@ -29,7 +29,7 @@ body{
 	display: flex;
 	justify-content: space-between;
 	text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
-	word-spacing: 0px; 
+	/* word-spacing: 0px;  */
 } 
 #white-logo{
 	height: 80%;
@@ -117,7 +117,9 @@ body{
 	height: calc(100% - 50px);
 	width: 100%;
 	background-color: rgb(12, 12, 12);
-	opacity: 95%;
+	opacity: 100%;
+	background: rgba(12, 12, 12, 0.6); /* Półprzezroczyste tło */
+  backdrop-filter: blur(3px); /* Efekt rozmycia */
 	transform: translateX(-100%);
 	transition: transform 600ms;
 	z-index: 1000;

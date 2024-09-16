@@ -122,7 +122,9 @@ body{
 	height: calc(100% - 50px);
 	width: 100%;
 	background-color: white;
-	opacity: 90%;
+	opacity: 100%;
+	background: rgba(255, 255, 255, 0.6); /* Półprzezroczyste tło */
+  backdrop-filter: blur(3px); /* Efekt rozmycia */
 	transform: translateX(-100%);
 	transition: transform 600ms;
 	z-index: 1000;
@@ -143,6 +145,7 @@ body{
   .mobile-menu li {
 	margin-bottom: 35px;
 	font-size: 30px;
+	
   }
   
   @media only screen and (max-width: 1240px) {
