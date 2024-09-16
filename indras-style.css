@@ -224,11 +224,13 @@ h1{
 	height: auto;
 	position: relative;
 }
+
+/* ////////moje///////// */
 @media only screen and (max-width: 850px){
 	.video-container {
 		margin-top: 0;
 		margin-bottom: 0;
-		display: absolute;
+		display: block;
 		top: -100px ;
 		/* transform: translate(0px, -100px); */
 		position: relative;
@@ -252,6 +254,7 @@ video {
     z-index: 10;
     pointer-events: none; /* Dzięki temu tekst nie będzie przeszkadzał w interakcji z wideo */
 }
+/* ////////* moje */
 @media only screen and (max-width: 850px){
 	.overlay-text {
 		margin-top: 0;
@@ -842,10 +845,12 @@ h3.highlight::before {
 	display: flex;
 }
 
+/* ////////moje///////////// */
+
 @media only screen and (max-width: 850px) {
 	#blue-square-top {
-	  display: absolute;
-	  width: 1920px; /* Dopasuj rozmiar */
+	  display: block;
+	  width: 850px; /* Dopasuj rozmiar */
 	  height: 400px;
 	  background-color:#c5d0d4;
 	  margin-top: 0;
@@ -856,12 +861,12 @@ h3.highlight::before {
   @media only screen and (max-width: 850px) {
 	#blue-square-bottom {
 	  display: block;
-	  width: 1920px; /* Dopasuj rozmiar */
-	  height: 300px;
+	  width: 850px; /* Dopasuj rozmiar */
+	  height: 200px;
 	  background-color: #b6ccd5;
-	  position: absolute;
+	  /* position: absolute; */
 	  /* margin-top: auto; */
-	  transform: translate(0px, -120px);
+	  transform: translate(0px, -110px);
 	  /* opacity: 0% ; */
 	}
   }
