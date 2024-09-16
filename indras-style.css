@@ -864,7 +864,7 @@ h3.highlight::before {
 	  width: 850px; /* Dopasuj rozmiar */
 	  height: 200px;
 	  background-color: #b6ccd5;
-	  /* position: absolute; */
+	  position: absolute;
 	  /* margin-top: auto; */
 	  transform: translate(0px, -110px);
 	  /* opacity: 0% ; */
