@@ -20,7 +20,7 @@ body{
 	opacity: 100%;
     margin: 0;
 	position: fixed;
-background: rgba(0, 0, 0, 0.6); /* Półprzezroczyste tło */
+background: rgba(12, 12, 12, 0.6); /* Półprzezroczyste tło */
   backdrop-filter: blur(3px); /* Efekt rozmycia */
     top: 0;
     left: 0;
