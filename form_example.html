@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz Kontaktowy</title>
+
+    <!-- Załaduj EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("3djE7HJitM5CAtfZc");
+        })();
+    </script>
+</head>
+<body>
+    <form id="contact-form">
+        <label for="name">Imię i nazwisko</label>
+        <input type="text" id="name" name="name" required>
+      
+        <label for="email">Adres e-mail</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="package">Wybierz pakiet</label>
+        <div class="radio-group">
+            <table>
+                <tr>
+                    <td>
+                        <label class="radio-container">
+                            <input type="radio" name="package" value="BASIC" required>
+                            <span>BASIC</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="radio-container">
+                            <input type="radio" name="package" value="NORMAL" required>
+                            <span>NORMAL</span>
+                        </label>
+                    </td>                    
+                </tr>
+                <tr>
+                    <td>
+                        <label class="radio-container">
+                            <input type="radio" name="package" value="PREMIUM" required>
+                            <span>PREMIUM</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label class="radio-container">
+                            <input type="radio" name="package" value="Nie wybieram" required>
+                            <span>Nie wybieram</span>
+                        </label>   
+                    </td>                    
+                </tr>
+            </table>
+        </div>
+    
+        <label for="message">Wiadomość</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit" id="send-button">Wyślij</button>
+    </form>
+
+    <script type="text/javascript">
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const sendButton = document.getElementById('send-button');
+            sendButton.disabled = true; // Wyłącz przycisk po pierwszym kliknięciu
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const package = document.querySelector('input[name="package"]:checked').value;
+            const message = document.getElementById('message').value;
+        
+            emailjs.send('service_q2ccwdl', 'template_e0pfrhs', {
+                name: name,
+                email: email,
+                package: package,
+                message: message,
+            })
+            .then(function(response) {
+                alert("Wiadomość została wysłana pomyślnie!");
+                document.getElementById('contact-form').reset();
+                sendButton.disabled = false; // Włącz przycisk ponownie po wysłaniu
+            }, function(error) {
+                console.error('Błąd podczas wysyłania wiadomości:', error);
+                alert("Nie udało się wysłać wiadomości. Spróbuj ponownie później.");
+                sendButton.disabled = false; // Włącz przycisk ponownie w przypadku błędu
+            });
+        });
+    </script>
+</body>
+</html>
