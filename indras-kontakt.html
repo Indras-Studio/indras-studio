@@ -7,13 +7,6 @@
     <link rel="stylesheet" href="indras-style-darkmode.css">
 	<link rel="icon" type="image/png" href="indras_logo.png"/>
 	<link href="https://fonts.googleapis.com/css2?family=Milker&display=swap" rel="stylesheet">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init("3djE7HJitM5CAtfZc");
-        })();
-    </script>
 </head>
 <body>
     <div id="header">
@@ -23,120 +16,42 @@
 			<li><a href="indras-o-nas.html" class="nav-a">O NAS</a></li>
 			<li><a href="indras-oferty.html" class="nav-a">OFERTY</a></li>
 			<li><a href="indras-kontakt.html" class="nav-a">KONTAKT</a></li>
-			<li><a href="indras-o-nas.html#section2" class="nav-a">PROJEKTY
+			<li><a href="indras-o-nas.html" class="nav-a">PROJEKTY
 				<div class="div-content">
 					<table id="projects">
 						<tr>
 							<th><img src="SC_icon.png" class="project-icon"></th>
 							<td><p>SCIENCE CLICKER</p></td>
 							<td><a href="https://play.google.com/store/apps/details?id=com.IndrasStudio.ScienceClicker" class="game-store-link" target="_blank">link do gry</a></td>
-							<td><a href="#" onclick="window.location.href='indras-o-nas.html#section2'; return false;"><button class="game-info-button">Więcej informacji</button></a></td>
+							<td><a href="#" onclick="window.location.href='indras-o-nas.html'; return false;"><button class="game-info-button">Więcej informacji</button></a></td>
 						</tr>
 						<tr>
 							<th><img src="ng_icon512.png" class="project-icon"></th>
 							<td><p>NEO GRAVITY</p></td>
 							<td><a href="https://play.google.com/store/apps/details?id=com.IndrasStudio.NeoGravity" class="game-store-link" target="_blank">link do gry</a></td>
-							<td><a href="#" onclick="window.location.href='indras-o-nas.html#section2'; return false;"><button class="game-info-button">Więcej informacji</button></a></td>
+							<td><a href="#" onclick="window.location.href='indras-o-nas.html'; return false;"><button class="game-info-button">Więcej informacji</button></a></td>
 						</tr>
 					</table>
 				</div>
 			</a></li>
 		</ul>
-        <div id="toggle-button" onclick="toggleMobileMenu(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
     </div>
-    <ul class="mobile-menu" id="mobile-menu">
-        <li><a href="indras-home.html" class="nav-a">STRONA GŁÓWNA</a></li>
-        <li><a href="indras-o-nas.html" class="nav-a">O NAS</a></li>
-        <li><a href="indras-oferty.html" class="nav-a">OFERTY</a></li>
-        <li><a href="indras-kontakt.html" class="nav-a">KONTAKT</a></li>
-        <li><a href="indras-o-nas.html#section2" class="nav-a">PROJEKTY</a></li>
-        <ul class="projects-list">
-            <li><a href="https://play.google.com/store/apps/details?id=com.IndrasStudio.ScienceClicker" target="_blank">SCIENCE CLICKER</a></li>
-            <li><a href="https://play.google.com/store/apps/details?id=com.IndrasStudio.NeoGravity" target="_blank">NEO GRAVITY</a></li> 
-        </ul>
-    </ul>
-    <script>
-        let isOpen = false;
-        function toggleMobileMenu(menu) {
-          const mobileMenu = document.getElementById('mobile-menu');
-          if (isOpen) {
-            const currentLeft = mobileMenu.getBoundingClientRect().left;
-            mobileMenu.style.transform = `translateX(${currentLeft - window.innerWidth}px)`;
-            setTimeout(() => {
-              mobileMenu.classList.remove('open');
-              mobileMenu.style.transform = 'translateX(-100%)';
-            }, 0);
-          } else {
-            mobileMenu.classList.add('open');
-            mobileMenu.style.transform = 'translateX(0)';
-          }
-          menu.classList.toggle('open');
-          isOpen = !isOpen;
-        }
-    </script>
-    <p id="offers-title" class="contact-title">Skontaktuj się z nami</p>
-	<form id="contact-form" method="post">
-        <label for="name">Imię i nazwisko</label>
-        <input type="text" id="name" name="name" required>
+    <h1 id="offers-title">Skontaktuj się z nami</h1>
+	<form method="post" action="indras-kontakt.html">
+        <label for="name">Imię i nazwisko:</label>
+        <input type="text" id="name" name="name">
       
-        <label for="email">Adres e-mail</label>
-        <input type="email" id="email" name="email" required>
+        <label for="email">Adres e-mail:</label>
+        <input type="email" id="email" name="email">
       
-        <!-- <label for="phone">Numer telefonu</label>
-        <input type="tel" id="phone" name="phone" required> -->
-    
-        <label for="package">Wybierz pakiet</label>
-        <div class="radio-group">
-            <table>
-                <tr>
-                    <td>
-                        <label class="radio-container">
-                            <input type="radio" name="package" value="BASIC" required>
-                            <span class="radio-button"></span>
-                            <span>BASIC</span>
-                        </label>
-                    </td>
-                    <td>
-                        <label class="radio-container">
-                            <input type="radio" name="package" value="NORMAL" required>
-                            <span class="radio-button"></span>
-                            <span>NORMAL</span>
-                        </label>
-                    </td>                    
-                </tr>
-                <tr>
-                    <td>
-                        <label class="radio-container">
-                            <input type="radio" name="package" value="PREMIUM" required>
-                            <span class="radio-button"></span>
-                            <span>PREMIUM</span>
-                        </label>
-                    </td>
-                    <td>
-                        <label class="radio-container">
-                            <input type="radio" name="package" value="Nie wybieram" required>
-                            <span class="radio-button"></span>
-                            <span>Nie wybieram</span>
-                        </label>   
-                    </td>                    
-                </tr>
-            </table>
-        </div>
-    
-        <label for="message">Wiadomość</label>
-        <textarea id="message" name="message" required></textarea>
-        
-        <!-- <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div> -->
-        
+        <label for="phone">Numer telefonu:</label>
+        <input type="tel" id="phone" name="phone">
+      
+        <label for="message">Wiadomość:</label>
+        <textarea id="message" name="message"></textarea>
+      
         <input type="submit" value="Wyślij">
-    </form>
-    
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    
+      </form>
 	<div id="footer">
         <div id="footer1">
             <h4>Menu</h4>
@@ -145,7 +60,7 @@
                 <li><a href="indras-o-nas.html" class="nav-a">O NAS</a></li>
                 <li><a href="indras-oferty.html" class="nav-a">OFERTY</a></li>
                 <li><a href="indras-kontakt.html" class="nav-a">KONTAKT</a></li>
-                <li><a href="indras-o-nas.html#section2" class="nav-a">PROJEKTY</a></li>
+                <li><a href="indras-o-nas.html" class="nav-a">PROJEKTY</a></li>
                 <li><a href="https://play.google.com/store/apps/details?id=com.IndrasStudio.ScienceClicker" class="nav-a">SCIENCE CLICKER</a></li>
                 <li><a href="https://play.google.com/store/apps/details?id=com.IndrasStudio.NeoGravity" class="nav-a">NEO GRAVITY</a></li>
             </ul>
@@ -162,42 +77,5 @@
             <h5>emailKontaktowy@gmail.com</h5>
         </div>
 	</div>
-    <script type="text/javascript">
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            // Walidacja reCAPTCHA
-            var recaptchaResponse = grecaptcha.getResponse();
-            if (recaptchaResponse.length === 0) {
-                alert("Please complete the reCAPTCHA.");
-                return;
-            }
-            
-            // Walidacja danych formularza
-            var name = document.getElementById('name').value;
-            var email = document.getElementById('email').value;
-            // var phone = document.getElementById('phone').value;
-            var package = document.querySelector('input[name="package"]:checked').value;
-            var message = document.getElementById('message').value;
-        
-            // Wysyłanie e-maila przez EmailJS
-            emailjs.send('service_q2ccwdl', 'template_e0pfrhs', {
-                name: name,
-                email: email,
-                // phone: phone,
-                package: package,
-                message: message,
-                'g-recaptcha-response': recaptchaResponse
-            })
-            .then(function(response) {
-               alert("Message sent successfully!");
-               document.getElementById('contact-form').reset();
-               grecaptcha.reset(); // Reset reCAPTCHA
-            }, function(error) {
-               alert("Failed to send message: " + JSON.stringify(error));
-            });
-        });
-        </script>
-        
 </body>
 </html>
