@@ -531,10 +531,6 @@ video {
 	border: 0px solid #000;
 	flex-direction: row;
 }
-.offers p {
-	text-align: center;
-	font-size: 12px;
-}
 #price{
 	font-size: 30px;
 	font-weight: 850;
@@ -742,6 +738,13 @@ video {
 #offer3 a,
 #offer3 hr {
 	z-index: 2;
+}
+#offer3 td{
+	text-align: left;
+}
+.offers p {
+	text-align: center;
+	font-size: 12px;
 }
 @media only screen and (max-width: 1200px) {
 	.offers{
