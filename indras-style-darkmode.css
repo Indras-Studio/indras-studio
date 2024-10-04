@@ -277,12 +277,12 @@ h1{
 /* moje */
 .gray_box {
 	display: block;
-	  width: 880px; /* Dopasuj rozmiar */
+	  width: 850px; /* Dopasuj rozmiar */
 	  height: 840px;
 	  background-color:#202020;
 	  margin-top: 100px ;
-	  margin-left: 260px ;
-	  border-radius: 20px; 
+	  margin-left: 200px ;
+	  border-radius: 30px; 
 	  font-family: Franklin Gothic ;
 	  font-size: 45px ;
 	  display: flex;
@@ -309,6 +309,7 @@ h1{
 		height: 850px;
 		font-size: 30px;
 		padding: 50px;
+		margin-left: 260px;
 	}
 }
 
