@@ -16,12 +16,11 @@ body{
 #header{
 	width: 100%;
     height: 50px;
-    background-color: rgb(12, 12, 12);
 	opacity: 100%;
     margin: 0;
 	position: fixed;
 	background: rgba(12, 12, 12, 0.6); /* Półprzezroczyste tło */
-  backdrop-filter: blur(3px); /* Efekt rozmycia */
+  	backdrop-filter: blur(3px); /* Efekt rozmycia */
     top: 0;
     left: 0;
 	z-index: 1000;
@@ -59,15 +58,17 @@ body{
 	text-decoration: underline;
 }
 .div-content {
-    background-color: rgb(12, 12, 12);
     height: 0px; /* Początkowa wysokość diva */
     transition: height 0.45s ease;
 	position: absolute;
+	background: rgba(12, 12, 12, 0.6); /* Półprzezroczyste tło */
+  	backdrop-filter: blur(3px); /* Efekt rozmycia */
 	top: 100%;
     bottom: -70px;
     right: 0;
     width: 480px;
 	overflow: hidden;
+	text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
 }
 .nav-a:hover .div-content {
     height: 120px; /* Wysunięcie zawartości diva */
@@ -530,6 +531,10 @@ video {
 	border: 0px solid #000;
 	flex-direction: row;
 }
+.offers p {
+	text-align: center;
+	font-size: 15px;
+}
 #price{
 	font-size: 30px;
 	font-weight: 850;
@@ -544,7 +549,7 @@ video {
 	height: 850px;
 	margin: 20px;
 	background-color: transparent;
-	border: white;
+	/* border: white; */
 	border-radius: 35px;
 	display: flex;
 	justify-content: center;
@@ -653,21 +658,24 @@ video {
 }
 .offers h1{
 	margin: 0;
+	color: rgb(14, 14, 14) ;
 }
 .offers_star{
 	height: 120px;
 	width: 120px;
 }
 #offer1{
-	border-color: white;
+	border-color: rgb(12, 12, 12);
 	color: white;
 	transition: box-shadow 0.5s ease;
+	background-color: rgb(14, 14, 14);
 }
 #offer1:hover{
 	box-shadow: 0 0 10px white;
 }
 #offer2{
-	border-color: #f3c2f5;
+	background-color: rgb(14, 14, 14);
+	border-color: rgb(12, 12, 12); /* border-color: #f3c2f5; */
 	color: #f3c2f5;
 	transition: box-shadow 0.5s ease;
 }
@@ -714,7 +722,7 @@ video {
 	width: 398px;
 	content: '';
 	position: absolute;
-	background-color: rgb(12, 12, 12);
+	background-color: rgb(14, 14, 14); /**/
 	border-radius: 35px;
 }
 
