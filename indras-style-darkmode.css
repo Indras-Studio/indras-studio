@@ -279,7 +279,8 @@ h1{
 	display: block;
 	  width: 850px; /* Dopasuj rozmiar */
 	  height: 840px;
-	  background-color:#202020;
+	  background: linear-gradient( #0f0f0f, #0e0e0e);
+	  /* background-color:#202020; */
 	  margin-top: 100px ;
 	  margin-left: 200px ;
 	  border-radius: 30px; 
