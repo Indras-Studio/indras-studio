@@ -9,7 +9,7 @@ body{
 	color: white;
 	display: flex;
 	flex-direction: column;
-    	align-items: center;
+    align-items: center;
 	overflow-x: hidden;
 	overflow-y: hidden;
 }
@@ -274,6 +274,44 @@ h1{
 		font-size: 40px;
 	}
 }
+/* moje */
+.gray_box {
+	display: block;
+	  width: 880px; /* Dopasuj rozmiar */
+	  height: 840px;
+	  background-color:#202020;
+	  margin-top: 100px ;
+	  margin-left: 260px ;
+	  border-radius: 20px; 
+	  font-family: Franklin Gothic ;
+	  font-size: 45px ;
+	  display: flex;
+	  flex-direction: column;
+	  padding: 80px;
+}
+.SC-text {
+	z-index: 1;
+	margin-left: 10px;
+	color: rgb(16, 250, 250);
+	text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff;
+}
+
+.NG-text {
+	z-index: 1;
+	margin-left: 10px;
+	color: rgb(115, 14, 173) ;
+	text-shadow: 0 0 20px rgb(115, 14, 173), 0 0 30px rgb(115, 14, 173), 0 0 40px rgb(115, 14, 173);
+}
+
+@media only screen and (max-width: 1000px) {
+	.gray_box{
+		width: 400px;
+		height: 730px;
+		font-size: 30px;
+		padding: 50px;
+	}
+}
+
 h2 {    
 	text-align: center;
 	color: white;
@@ -531,6 +569,10 @@ video {
 	border: 0px solid #000;
 	flex-direction: row;
 }
+.offers p {
+	text-align: center;
+	font-size: 15px;
+}
 #price{
 	font-size: 30px;
 	font-weight: 850;
@@ -691,7 +733,7 @@ video {
 	box-shadow: 0 0 15px #ff004e;
 	color: #ff004e;
 	flex-direction: column; /* Dodane aby tekst był w kolumnie */
-	text-align: left; /* Dodane aby tekst był wyśrodkowany */
+	text-align: center; /* Dodane aby tekst był wyśrodkowany */
 	transition: box-shadow 0.5s ease;
 }
 #offer3:hover{
@@ -738,13 +780,6 @@ video {
 #offer3 a,
 #offer3 hr {
 	z-index: 2;
-}
-#offer3 td{
-	text-align: left;
-}
-.offers p {
-	text-align: center;
-	font-size: 12px;
 }
 @media only screen and (max-width: 1200px) {
 	.offers{
