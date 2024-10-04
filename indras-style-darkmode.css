@@ -9,7 +9,7 @@ body{
 	color: white;
 	display: flex;
 	flex-direction: column;
-    align-items: center;
+    	align-items: center;
 	overflow-x: hidden;
 	overflow-y: hidden;
 }
@@ -533,7 +533,7 @@ video {
 }
 .offers p {
 	text-align: center;
-	font-size: 15px;
+	font-size: 12px;
 }
 #price{
 	font-size: 30px;
@@ -695,7 +695,7 @@ video {
 	box-shadow: 0 0 15px #ff004e;
 	color: #ff004e;
 	flex-direction: column; /* Dodane aby tekst był w kolumnie */
-	text-align: center; /* Dodane aby tekst był wyśrodkowany */
+	text-align: left; /* Dodane aby tekst był wyśrodkowany */
 	transition: box-shadow 0.5s ease;
 }
 #offer3:hover{
