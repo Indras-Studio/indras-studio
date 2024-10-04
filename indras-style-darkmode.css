@@ -303,7 +303,7 @@ h1{
 	text-shadow: 0 0 20px rgb(115, 14, 173), 0 0 30px rgb(115, 14, 173), 0 0 40px rgb(115, 14, 173);
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 850px) {
 	.gray_box{
 		width: 400px;
 		height: 851px;
